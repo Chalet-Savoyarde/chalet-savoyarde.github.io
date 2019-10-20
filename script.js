@@ -36,9 +36,10 @@ async function deleteBooking(id) {
 }
 
 logins = {
-  "afdcba2e170f8107dd68c4227dbbbf0bc44c7b9ae55506ca331c5c168840ee80": "Rob",
+  "afdcba2e170f8107dd68c4227dbbbf0bc44c7b9ae55506ca331c5c168840ee80": "Rob & Julie",
   "59b49254ad1fd354d2488f46cc5f9e2f25d78d5c9360075eeec1964993e23256": "Sammy",
   "5017d3663e9febf38e59f86dd861ec016d6d1b18d9887fd2c0cf43ed5844b34a": "Jasper",
+  "3b40ae7f1d946e4745467ee6c18e46ec8a3903ec37563662b34b58f5cce30232": "Finneys"
 };
 
 Date.prototype.yyyymmdd = function() {
