@@ -6,7 +6,7 @@ const state = {
   events: null
 };
 
-const host = "http://localhost:5000";
+const host = "http://server.chaletsavoyarde.com:3232";
 
 async function postData(url = "", data = {}) {
   // Default options are marked with *
