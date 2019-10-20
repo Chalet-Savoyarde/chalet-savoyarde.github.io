@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Chalet Savoyarde Booking System</title>
+    <meta name="description" content="Booking for Chalet La Savoyarde" />
+    <meta name="author" content="Samuel Gillespie" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/vue-simple-notify/dist/vue-simple-notify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="app">
+      <transition name="fade">
+        <component v-bind:is="page"></component>
+      </transition>
+    </div>
+
+    <template id="landingPage">
+      <div id="landing">
+        <div id="login" class="centered">
+          <h1>Welcome to Chalet La Savoyarde</h1>
+          <h2>Please enter your password to access the booking system</h2>
+          <input id="password" type="password" />
+          <vue-simple-notify class="errors" :items="errors"></vue-simple-notify>
+        </div>
+      </div>
+    </template>
+
+    <template id="bookingPage">
+      <div>
+        <div class="banner">
+          <h1>Booking System</h1>
+        </div>
+        <div class="grid">
+          <div id="booking" class="gridItem">
+            <h2>Calendar</h2>
+            <Calendar
+              always-half-day="true"
+              render-style="background"
+              enable-context-menu="true"
+              :context-menu-items="contextMenuItems"
+              enable-range-selection="true"
+              :data-source="state.events"
+              @mouse-on-day="mouseOnDay"
+              @mouse-out-day="mouseOutDay"
+              @click-day="clickDay"
+            ></Calendar>
+          </div>
+          <div id="upcoming" class="gridItem">
+            <h2>Upcoming Bookings</h2>
+            
+            <div class="js-Accordion" id="accordion">
+              
+                <button id="newBooking" class="js-Accordion-title" >New Booking</button>
+                <div class="js-Accordion-content">
+                  <form>
+                    <span class="bold">Owner:</span> {{ state.login }}<br />
+                    <label for="startDate">Start Date:</label><input id="startDate" type="date" /><br>
+                    <label for="endDate">End Date:</label><input id="endDate" type="date" /><br>
+                    <label for="description">Description:</label><br><textarea id="description" rows="10"></textarea>
+                    <div @click="publish" id="submitNew">Save</div>
+                  </form>
+                </div>
+
+
+              <div v-for="(event, index) in upcomingEvents">
+                <button
+                  :class="'js-Accordion-title event-' + event.id"
+                  :data-index="index + 2"
+                  :data-id="event.id"
+                >
+                  <span></span>
+                  <div>
+                    <span class="bold">{{ event.name }}:</span>
+                    {{ event.startDate.yyyymmdd() }}
+                  </div>
+                  <span class="controls">
+                    <i @click="edit" class="fa fa-edit"></i><i @click="trash" class="fa fa-trash"></i>
+                  </span>
+                </button>
+                <div class="js-Accordion-content">
+                  <div>
+                    <span class="bold">Owner:</span> {{ event.name }}<br />
+                    <span class="bold">Start Date:</span>
+                    {{ event.startDate.yyyymmdd() }}<br />
+                    <span class="bold">End Date:</span>
+                    {{ event.endDate.yyyymmdd() }}<br />
+                    <hr />
+                    <div>{{ event.details }}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"
+      integrity="sha256-u6BamZiW5tCemje2nrteKC2KoLIKX9lKPSpvCkOhamw="
+      crossorigin="anonymous"
+    ></script>
+    <script src=" https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-simple-notify/dist/vue-simple-notify.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@5"></script>
+    <script src="https://unpkg.com/v-year-calendar@latest/dist/v-year-calendar.umd.min.js"></script>
+    <script src="vanilla-js-accordion.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

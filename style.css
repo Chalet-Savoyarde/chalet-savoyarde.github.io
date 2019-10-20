@@ -1,0 +1,179 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+}
+
+#landing {
+  background: url("background.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 4em;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 32px;
+  margin: 36px 0 36px;
+  text-align: center;
+}
+
+#login input {
+  height: 50px;
+  width: 50%;
+  text-align: center;
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+#login {
+  position: fixed;
+  /* or absolute */
+  width: 40%;
+  height: 30%;
+  top: 35%;
+  left: 30%;
+  text-align: center;
+  color: #dddddd;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.errors {
+  width: 54%;
+  display: inline-block;
+}
+
+.banner {
+  text-align: center;
+  background-image: url("alps.jpg");
+  background-size: 100%;
+  color: white;
+}
+
+.banner h1 {
+  margin: 0;
+  padding: 40px;
+}
+
+.grid {
+  margin: auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-column-gap: 20px;
+}
+
+.js-Accordion {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.js-Accordion-title {
+  background: hsl(207, 66%, 64%);
+  border: 0;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 15% auto 15%;
+  padding: 1em 1em;
+  width: 100%;
+  font-size: 18px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.js-Accordion-content {
+  border: 1px solid #ccc;
+  border-top: 0;
+  height: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  transition: all 0.25s linear;
+}
+
+.js-Accordion-content div, .js-Accordion-content form {
+  padding: 10px;
+}
+
+#newBooking {
+    background: hsl(145, 65%, 64%);
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button > *:not(:last-child) {
+  pointer-events: none;
+}
+
+.controls {
+  font-size: 30px;
+  margin: -0.3em;
+}
+
+.controls i {
+    padding-left: 10px;
+}
+
+.controls i:hover {
+    color:white;
+}
+
+.js-Accordion-content label {
+  font-weight: bold;
+  padding-right: 20px;
+}
+
+.js-Accordion-content textarea {
+  width: 99%;
+  resize: none;
+  overflow-y: auto;
+}
+
+#submitNew {
+	background-color:#44c767;
+	border:2px solid #18ab29;
+	display:block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: "Open Sans", sans-serif;
+  font-size:20px;
+  font-weight: bold;
+  padding:16px 31px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #2f6627;
+  text-align: center;
+  margin: 10px auto;
+  width: 40%;
+}
+#submitNew:hover {
+	background-color:#4e9e23;
+}
+#submitNew:active {
+	position:relative;
+  top:1px;
+  
+}
