@@ -37,7 +37,7 @@ async function deleteBooking(id) {
 
 logins = {
   "4707a6466bd501eec7a64e790ba71f747d7c660d4784f402ae41e4a4927c5a03": "Rob",
-  be831db56b1ebbb7259fbb3f2fe26672aed4ca2661730321b0893e50aee64182: "Sam"
+  be831db56b1ebbb7259fbb3f2fe26672aed4ca2661730321b0893e50aee64182: "Sammy"
 };
 
 Date.prototype.yyyymmdd = function() {
