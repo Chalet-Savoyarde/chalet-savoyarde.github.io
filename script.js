@@ -45,7 +45,7 @@ logins = {
 colors = {
   "Rob & Julie": "#5bbd42",
   "Sammy": "#5bbd42",
-  "Jasper": "#5bbd42",
+  "Jasper": "#69cf6b",
   "Finneys": "#34aad1",
 }
 
