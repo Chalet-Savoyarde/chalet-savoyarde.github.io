@@ -38,9 +38,16 @@ async function deleteBooking(id) {
 logins = {
   "afdcba2e170f8107dd68c4227dbbbf0bc44c7b9ae55506ca331c5c168840ee80": "Rob & Julie",
   "59b49254ad1fd354d2488f46cc5f9e2f25d78d5c9360075eeec1964993e23256": "Sammy",
-  "5017d3663e9febf38e59f86dd861ec016d6d1b18d9887fd2c0cf43ed5844b34a": "Jasper",
+  "ee4bc5b03f1cacb801ea5f492e626ba9c31441cfa2b0476f024f29ce3be75d2d": "Jasper",
   "3b40ae7f1d946e4745467ee6c18e46ec8a3903ec37563662b34b58f5cce30232": "Finneys"
 };
+
+colors = {
+  "Rob & Julie": "#5bbd42",
+  "Sammy": "#5bbd42",
+  "Jasper": "#5bbd42",
+  "Finneys": "#34aad1",
+}
 
 Date.prototype.yyyymmdd = function() {
   var mm = this.getMonth() + 1; // getMonth() is zero-based
@@ -66,6 +73,7 @@ async function getBookings() {
           name: r.attributes.owner,
           details: r.attributes.description,
           id: r.id,
+          color: colors[r.attributes.owner],
           upcoming: new Date() < new Date(r.attributes.startDate)
         }));
       }
