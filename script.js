@@ -6,7 +6,7 @@ const state = {
   events: null
 };
 
-const host = "http://server.chaletsavoyarde.com:3232";
+const host = "https://bookings.gillespie.dev";
 
 async function postData(url = "", data = {}) {
   // Default options are marked with *
