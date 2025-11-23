@@ -39,7 +39,8 @@ logins = {
   "afdcba2e170f8107dd68c4227dbbbf0bc44c7b9ae55506ca331c5c168840ee80": "Rob & Julie",
   "59b49254ad1fd354d2488f46cc5f9e2f25d78d5c9360075eeec1964993e23256": "Sammy",
   "ee4bc5b03f1cacb801ea5f492e626ba9c31441cfa2b0476f024f29ce3be75d2d": "Jasper",
-  "3b40ae7f1d946e4745467ee6c18e46ec8a3903ec37563662b34b58f5cce30232": "Finneys"
+  "3b40ae7f1d946e4745467ee6c18e46ec8a3903ec37563662b34b58f5cce30232": "Finneys",
+  "2b2a84a8bc99bb521edbdaf191860d1bacc0c95454dc4b470a7d17cd249dcd99": "Leanne",
 };
 
 colors = {
@@ -47,6 +48,7 @@ colors = {
   "Sammy": "#5bbd42",
   "Jasper": "#69cf6b",
   "Finneys": "#34aad1",
+  "Leanne": "#ff9dfe",
 }
 
 Date.prototype.yyyymmdd = function() {
